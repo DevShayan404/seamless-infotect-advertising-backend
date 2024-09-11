@@ -5,15 +5,20 @@ import * as nodemailer from 'nodemailer';
 export class ContactUsService {
   async sendEmail(contactData: any) {
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.ionos.com',
+      port: 587,
+      secure: false,
       auth: {
-        user: 'muhammadshayandev@gmail.com',
-        pass: 'mhoh xzvh bkbb eklh',
+        user: 'contact@infotechseamless.com',
+        pass: 'Seamless@contact!',
+      },
+      tls: {
+        rejectUnauthorized: false,
       },
     });
     const mailOptions = {
-      from: contactData.email,
-      to: 'muhammadshayandev@gmail.com',
+      from: 'contact@infotechseamless.com',
+      to: 'contact@infotechseamless.com',
       subject: contactData.subject,
       text: `${contactData.message}\n\n\nCompany: ${contactData.company}\nName: ${contactData.name}\nPhone no: ${contactData.phone}\nE-mail: ${contactData.email}`,
     };
