@@ -26,4 +26,8 @@ export class CreateContactUsDto {
   @IsNotEmpty()
   @IsString()
   message: string;
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
+  service: string;
 }

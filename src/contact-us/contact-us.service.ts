@@ -20,7 +20,7 @@ export class ContactUsService {
       from: 'contact@infotechseamless.com',
       to: 'contact@infotechseamless.com',
       subject: contactData.subject,
-      text: `${contactData.message}\n\n\nCompany: ${contactData.company}\nName: ${contactData.name}\nPhone no: ${contactData.phone}\nE-mail: ${contactData.email}`,
+      text: `${contactData.message}\n\nCompany: ${contactData.company}\nService: ${contactData.service}\nName: ${contactData.name}\nPhone no: ${contactData.phone}\nE-mail: ${contactData.email}`,
     };
 
     try {
